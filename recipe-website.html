@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+<style>
+  *{
+    a{
+      text-decoration: none;
+    }
+  }
+
+.main-header{
+display: flex;
+justify-content: space-between;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+border-radius: 15px;
+align-items: center;
+padding-top: 20px;
+padding-bottom: 20px;
+position: fixed; 
+top: 0; 
+left: 0;
+right: 0; 
+z-index: 1000; 
+background-color: #fff
+  }
+  .main-header a,
+  .main-header input,
+  .main-header div {
+    color:  rgb(204, 44, 44); 
+  }
+
+
+  body{
+    padding-top: 100px ;
+  }
+  .recipe-a{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: Montserrat;
+    color: rgb(204, 44, 44);
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .link-div{
+    display: flex;
+    gap: 30px;
+    margin-right: 30px;
+  }
+
+  .link-div a{
+    text-decoration: none;
+    color: gray;
+    font-family: Montserrat;
+    position: relative;
+    font-size: 15px;
+  }
+
+
+  .search-bar{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 600px;
+    text-indent : 10px;
+    outline: none;
+    margin-right: 40px;
+    border-radius: 6px;
+    border-color: lightslategrey;
+    border-width: 1px;
+  }
+
+  nav{
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    box-shadow: 0px 2px 2px -2px gray;
+    padding-bottom: 25px;
+  }
+
+.nav-div a{
+margin-left: 30px;
+text-decoration: none;
+color: #000;
+font-family: Montserrat;
+font-weight: 800;
+}
+
+.get-mag div{
+  text-decoration: none;
+  color: rgb(204, 44, 44);
+  font-family: Poppins;
+  font-weight: 700;
+}
+.img-grid{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+gap: 320px;
+}
+.main-sec{
+  margin-top: 90px;
+}
+
+.apple-img{
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 600;
+  color: lightslategray;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.heading{
+  color: #000;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: Poppins;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.food-news{
+background-color: rgb(230, 243, 230);
+width: 100%;
+max-width: 400px;
+height: 500px;
+padding: 20px;
+border-radius: 10px;
+}
+
+.food-news h2{
+  font-family: Montserrat;
+  margin-left: 130px;
+  margin-top: 10px;
+}
+
+.food-news-links{
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.card-img,.card-img-2,.card-img-3,.card-img-3{
+  margin-left: 10px;
+  border-radius: 15px;
+}
+
+.card__title-text{
+  text-decoration: none; 
+  font-family: Poppins;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card__title-text:hover{
+  text-decoration: underline red;
+}
+
+.retro-dish,.meet-apple,.best-appetizer,.Amazon-prime{
+  display: flex;
+  gap: 15px;
+}
+
+.main-div-2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.second-sec{
+  margin-top: 20px;
+}
+.Trend{
+  font-size: 30px;
+  font-family: Poppins;
+}
+.trends-recipes,.apple-recipes,.october-recipe,.hatch-chiles{
+display: flex;
+gap: 20px;
+background-color: #eeeeee;
+border-radius: 15px;
+}
+.trends-word{
+  color: #5c5a5a;
+  font-family: Montserrat;  
+  font-weight: 700;
+  margin-top: 10px;
+}
+.trends-div{
+  margin-bottom: 7px;
+  margin-top: 10px;
+}
+.inner-card h2{
+color: #000;
+font-family: Roboto;
+font-weight: 800;
+font-size: 30px;
+}
+
+.inner-card .in-the-kitchen {
+font-size: 19px;
+font-family: Poppins;
+font-weight: 600;
+color: #5c5a5a;
+margin-bottom: 0;
+}
+
+.inner-card .read-more{
+  color: #000;
+  font-family: Poppins;
+}
+
+.inner-card{
+  max-width: 400px;
+  background-color: #fff;
+  position: absolute;
+  top: 1600px;
+  left: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+.news-letters {
+  display: inline-block; 
+  padding: 10px 30px; 
+  border: 2px solid rgb(255, 0, 0); 
+  border-radius: 5px;
+  text-decoration: none; 
+  color: black; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.news-letters:hover {
+  background-color: rgb(255, 0, 0); 
+  color: white; 
+  cursor: pointer; 
+}
+.span-newsletter{
+  font-family: Nunito;
+  font-weight: 900;
+  font-size: 15px;
+}
+.recipe-b{
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+.follow-us{
+  margin-left: 60px;
+}
+
+.cuisine{
+  list-style-type: none; 
+  padding-bottom: 10px; 
+  margin-left: 60px;
+}
+.link__wrapper{
+  color: #000;
+  font-family: Poppins;
+  font-weight: 700;
+}
+.footer{
+  background-color: #dfdede;
+  padding-bottom: 60px;
+  padding-top: 30px;
+  border-top: 1px;
+  border-radius: 25px;
+}
+.nav-div {
+      background-color: #333;
+      
+    }
+
+    .nav-div a {
+      float: left;
+      display: block;
+      color: #000;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .nav-div a:hover {
+      background-color: #fff;
+      color: black;
+    }
+
+  
+    
+
+
+
+</style>
+<body>
+  <header class="main-header">
+    <a href="#" class="recipe-a">
+      <div>Food Corner</div>
+    </a>
+
+    <input class="search-bar" type="text" placeholder="Find a recipe or Ingrediant">
+ <div class="link-div">
+  <a href="log-in-recipe.html">
+    <div>
+      Log in
+    </div>
+  </a>
+  <a href="dinners.html">
+    <div>
+    Dinners
+    </div>
+  </a>
+  <a href="restaurant.html">
+    <div>
+    Restaurants
+    </div>
+  </a>
+ </div>
+  
+  </header>
+
+  
+  
+
+  <section class="main-sec">
+    <div class="img-grid">
+      <a href="apple-dessert-dishes.html">
+        <div>
+          <img src="https://www.allrecipes.com/thmb/473noSzQ-msjCY3m4Sq60Rsm6f0=/800x533/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/9402463_Caramel-Apple-Bundt-Cake-4x3-8fcfdc63b24a4121b5f437623fc42ac8.jpg" width="800" height="533"  class="card-img " data-expand="300" src="https://www.allrecipes.com/thmb/473noSzQ-msjCY3m4Sq60Rsm6f0=/800x533/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/9402463_Caramel-Apple-Bundt-Cake-4x3-8fcfdc63b24a4121b5f437623fc42ac8.jpg">
+
+          <p class="apple-img">
+            APPLE DESSERT DISHES
+          </p>
+          <p class="heading">
+            Top 5 Caramel-Apple Desserts to Indulge in This Fall
+          </p>
+          
+        </div>
+      </a>
+  
+      <div class="food-news">
+        <h2>Food News</h2>
+        <div class="food-news-links">
+          <span class="retro-dish">
+            <div>
+              <img data-src="https://www.allrecipes.com/thmb/-5wsLI_bFIWfop-lSFq4LSA1Zzw=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ar-cashew-chicken-4x3-1137a10e83174da7994b55ace7f11303.jpg" width="144" height="95" alt="black bowl of cashew chicken with chopsticks on side" class="card-img" data-expand="300" src="https://www.allrecipes.com/thmb/-5wsLI_bFIWfop-lSFq4LSA1Zzw=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ar-cashew-chicken-4x3-1137a10e83174da7994b55ace7f11303.jpg">
+            </div>
+
+            <div class="retro-div">
+              <span class="card__title-text">I Tried the Retro Midwest Dish That’s a Missouri Legend</span>
+            </div>
+          </span>
+          <div class="meet-apple">
+          <div>
+            <img data-src="https://www.allrecipes.com/thmb/FB-iACCp53yIIgiD4o-m8KdH5Qg=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/12409-apple-crisp-II-MFS-033-beauty1-4x3-e7f6d6c193484e0daa43e571723ff16e.jpg" width="144" height="95"  class="card-img-2" data-expand="300" src="https://www.allrecipes.com/thmb/FB-iACCp53yIIgiD4o-m8KdH5Qg=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/12409-apple-crisp-II-MFS-033-beauty1-4x3-e7f6d6c193484e0daa43e571723ff16e.jpg">
+          </div>
+          <div>
+            <span class="card__title-text ">Meet Apple Goodie: An Apple Farmer's Favorite Dessert</span>
+          </div>
+        </div>
+          <div class="best-appetizer">
+            <div>
+              <img data-src="https://www.allrecipes.com/thmb/RoUj7agkP7fhj-dVz1BLqSMHzpE=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8710652_Nashville-Hot-Mozzarella-Sticks_Dotdash-Meredith-Food-Studios_4x3-aa97611330a14fef907640214ce7848b.jpg" width="144" height="95" alt="golden fried mozzarella sticks in paper-lined basket with ranch dressing for dipping" class="card-img-3" data-expand="300" src="https://www.allrecipes.com/thmb/RoUj7agkP7fhj-dVz1BLqSMHzpE=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8710652_Nashville-Hot-Mozzarella-Sticks_Dotdash-Meredith-Food-Studios_4x3-aa97611330a14fef907640214ce7848b.jpg">
+              </div>
+              <div>
+                <span class="card__title-text ">The Best Appetizer at Chili's Isn't Even on the Menu</span>
+              </div>
+            </div>
+              <div class="Amazon-prime">
+                <div>
+                  <img data-src="https://www.allrecipes.com/thmb/YhQZjELFGwJhwK32HdF5MApXjKc=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ar-best-early-deals-tout-3323fae793b6463680c89ed10f69c139.jpg" width="144" height="95" alt="Best Early Deals" class="card-img-3" data-expand="300" src="https://www.allrecipes.com/thmb/YhQZjELFGwJhwK32HdF5MApXjKc=/144x95/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ar-best-early-deals-tout-3323fae793b6463680c89ed10f69c139.jpg">
+                </div>
+                <div>
+                  <span class="card__title-text"> PSA: Amazon Prime Big Deal Days Is Coming Next Month</span>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="second-sec">
+  <div>
+    <h2 class="Trend">Trending Now</h2>
+  </div>
+  <div class="main-div-2">
+  <a href="pizza-fest.html"  class="trends-recipes">
+  <div>
+  <img data-src="https://img.freepik.com/free-photo/freshly-baked-pizza-rustic-wooden-table-generated-by-ai_24640-82163.jpg?ga=GA1.2.938198140.1716003233&semt=ais_hybrid-rr-similar" width="200" height="150" alt="top-down view of an oval baking dish of colorful layers of zucchini, yellow squash, and bell pepper (&quot;Disney's Ratatouille&quot;)" class="card__img universal-image__image lazyloadwait lazyloaded" data-expand="300" src="https://img.freepik.com/free-photo/freshly-baked-pizza-rustic-wooden-table-generated-by-ai_24640-82163.jpg?ga=GA1.2.938198140.1716003233&semt=ais_hybrid-rr-similar" style="border-radius: 15px;">
+    </div>
+<div>
+  <div class = "trends-div">
+     <span class="trends-word">Trends</span>
+  </div>
+    <div>
+       <span class="card__title-text" style="font-size: 20px;">
+        Pizzafest !!!
+        </span>
+    </div>
+</div>
+  </a>
+
+  <a href="la-tomatina.html" class = "apple-recipes">
+  <div>
+    <img data-src="https://t3.ftcdn.net/jpg/08/53/17/42/240_F_853174272_5wczKsG61Jk61AT9P9LsAN01u4QqG2BP.jpg" width="200" height="150" alt="Apple Crisp II" class="card__img universal-image__image lazyloadwait lazyloaded" data-expand="300" src="https://t3.ftcdn.net/jpg/08/53/17/42/240_F_853174272_5wczKsG61Jk61AT9P9LsAN01u4QqG2BP.jpg" style="border-radius: 15px;">
+  </div>
+  <div>
+    <div class="trends-div">
+      <span class="trends-word"
+    >Welcome to Spanish Beauty</span>
+    </div>
+    <div>
+      <span class="card__title-text ">
+        La Tomatina
+      </span>
+    </div>
+  </div>
+  </a>
+  <a href="ocktoberFest.html" class="october-recipe">
+  <div>
+    <img data-src="https://www.allrecipes.com/thmb/tbu7lesrw1unh5rRy6JNY0X5yxk=/400x264/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/592304_PapaDrexlersBavarianPretzels4x3-cdb5263f7d8e4b33927f7cfb03bda27f.jpg" width="200" height="150" alt="closeup of a dark brown soft pretzel topped with coarse salt" class="card__img universal-image__image lazyloadwait lazyloaded" data-expand="300" src="https://www.allrecipes.com/thmb/tbu7lesrw1unh5rRy6JNY0X5yxk=/400x264/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/592304_PapaDrexlersBavarianPretzels4x3-cdb5263f7d8e4b33927f7cfb03bda27f.jpg" style="border-radius: 15px;">
+  </div>
+  <div>
+    <div>
+      <span class="trends-word">
+        OCKTOBERFEST
+      </span>
+    </div>
+    <div>
+      <span class="card__title-text ">
+        Its OCKTOBERFEST!
+      </span>
+    </div>
+  </div>
+  </a>
+  <a href="ramen.html" class="hatch-chiles">
+  <div>
+    <img data-src="https://img.freepik.com/free-photo/healthy-gourmet-pork-ramen-noodles-soup-generated-by-ai_188544-29028.jpg?ga=GA1.2.938198140.1716003233&semt=ais_hybrid-rr-similar" width="200" height="150" data-expand="300" src="https://img.freepik.com/free-photo/healthy-gourmet-pork-ramen-noodles-soup-generated-by-ai_188544-29028.jpg?ga=GA1.2.938198140.1716003233&semt=ais_hybrid-rr-similar" style="border-radius: 15px;">
+  </div>
+  <div>
+    <div>
+      <span class="trends-word">
+      Sapparo Delight
+      </span>
+    </div>
+    <div>
+      <span class="card__title-text ">
+        Sapporo Snow Festival & Ramen Show
+      </span>
+    </div>
+  </div>
+  </a>  
+  </div>
+  </section>
+  <section style="margin-top: 60px;">
+    <a href="French-wine.html">
+      <img data-src="freepik-export-20241013121006yIRn.jpeg" width="1320" height="743"  class="card__img universal-image__image lazyloadwait lazyloaded" data-expand="300" src="freepik-export-20241013121006yIRn.jpeg" style = "border-radius: 25px;">
+      <div class="inner-card">
+        <p class="in-the-kitchen">
+        Wine of the century
+        </p>
+        <h2 style="font-family: italianno; font-size: 35px;">
+          1945 Château Mouton Rothschild
+        </h2>
+        <p class="read-more">
+          Read more about the French delicacy which set the stone for generations.
+        </p>
+      </div>
+    </a>
+  </section>
+<footer class="footer">
+  <div style="display: flex; justify-content: space-around;">
+      <div>
+        <a href="recipe-website.html" class="recipe-a">
+          <div class="recipe-b">Food Corner</div>
+        </a>
+        <a href="#" class="news-letters">
+          <span class="span-newsletter">
+            NEWSLETTERS
+          </span>
+        </a>
+        <p class="follow-us">Follow Us</p>
+      </div>
+      <div style="margin-top: 50px;">
+        <li class="cuisine"><a href="dinners.html"><span class="link__wrapper">Dinners</span></a></li>
+
+        <li class="cuisine"><a href="restaurant.html"><span class="link__wrapper">Restaurants</span></a></li>
+
+        <li class="cuisine"><a href="#"><span class="link__wrapper">Occasions</span></a></li>
+
+      </div>
+  </div>  
+</footer>
+  </body>
+</html>

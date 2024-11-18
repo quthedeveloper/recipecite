@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza fest</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  .pizza-img{
+    width: 700px;
+    height: 500px;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px rgba(139, 135, 135, 0.5); 
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .pizza-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+    }
+  .heading{
+    font-family: Poppins;
+    margin-bottom: 60px;
+    margin-left: 30px;
+    color: rgb(168, 11, 11);
+  }
+  .pizza-head{
+   font-family: Roboto;
+   margin-top: 0px;
+   font-size: 30px; 
+   font-weight: 800;
+   margin-bottom: 7px;
+  }
+  p{
+    font-family: Nunito;
+    margin: 0;
+    margin-right: 160px;
+  }
+  section{
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .adjust{
+    display: flex;
+    gap: 20px;
+  }
+  .para-div{
+    background-color: rgb(233, 233, 233);
+    padding-top:  20px;
+    padding-left: 20px;
+    border-radius: 25px;
+  }
+  .timmer-div{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #d9534f;
+    text-align: center;
+    padding: 80px;
+    border: none ;
+    border-radius: 25px;
+    margin-bottom: 20px;
+  }
+  .timmer-div, .para-div {
+      border-radius: 25px;
+      box-shadow: 0 6px 12px rgba(139, 135, 135, 0.5); 
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    
+    .timmer-div:hover, .para-div:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
+    }
+
+</style>
+<body>
+
+  <h1 class="heading">Italian Pizza Festival</h1>
+
+  <section>
+  <div class="adjust">
+    <div>
+      <div  class="timmer-div">
+        12 Days : 05 Hours : 45 Minutes 
+      </div>
+      <div>
+        <img src="https://th.bing.com/th?id=OIP.IuwiTE8fd-OtAn0Z3EYarwHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&cb=13&pid=3.1&rm=2" class ="pizza-img">
+      </div>  
+    </div>
+        <div class="para-div">
+      <h2 class="pizza-head">Pizzafest (Naples, Italy)</h2>
+    <p>
+      Pizzafest in Naples, Italy, is a renowned annual celebration of Neapolitan pizza, taking place each September. Established in 1995 by the Associazione Verace Pizza Napoletana (AVPN), the event honors the art of making authentic Neapolitan pizza, recognized by UNESCO as an Intangible Cultural Heritage.
+
+The festival offers visitors the chance to sample a variety of pizzas, from traditional Margherita and Marinara to innovative creations. Pizza-making competitions are a major highlight, with world-class pizzaiolos competing for the title of “Best Pizzaiolo,” judged on dough preparation, baking techniques, and overall flavor.
+
+Workshops and masterclasses led by expert pizzaiolos allow participants to learn traditional techniques, such as dough kneading, fermentation, and the use of wood-fired ovens. These sessions focus on maintaining the authenticity of Neapolitan pizza-making, which uses specific ingredients like San Marzano tomatoes and mozzarella di bufala.
+
+In addition to food, Pizzafest celebrates Neapolitan culture with live music, dance, and historical exhibitions about pizza’s origins. Held along the Naples seafront, the event features a "pizza village" where local pizzerias, including historic ones like L'Antica Pizzeria da Michele, serve their pizzas.
+    </p>
+    </div>
+  </div>
+  </section>
